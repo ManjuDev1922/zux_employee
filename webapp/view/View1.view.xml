@@ -1,0 +1,84 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" controllerName="zuxemployee.zuxemployee.controller.View1" displayBlock="true">
+    <Page id="page" title="{i18n>title}">
+        <content> 
+            <SplitContainer
+                id="SplitContDemo"
+                initialDetail="detail"
+                initialMaster="master">
+                <detailPages>
+                    <Page
+                        id="detail"
+                        title="Detail 1"
+                        backgroundDesign= "Solid"
+                        showNavButton="{= !${device>/system/desktop} }"
+                        navButtonPress=".onPressDetailBack">
+                        <Label id="_IDGenLabel1" text="Detail page 1" class="sapUiTinyMarginEnd" />
+                        <Button id="_IDGenButton" text="Go to Detail page 2" press=".onPressNavToDetail" />
+                    </Page>
+                    <Page
+                        id="detailDetail"
+                        title="Detail Detail"
+                        backgroundDesign= "Solid"
+                        showNavButton="true"
+                        navButtonPress=".onPressDetailBack">
+                        <VBox id="_IDGenVBox" class="sapUiSmallMargin">
+                            <Label id="_IDGenLabel2" text="This is Detail Page 2" />
+                            <Text id="_IDGenText2" text="Here you could change the Split Application mode. After the mode change, resize the browser window to see the difference in the master form behaviour." />
+                            <RadioButtonGroup id="_IDGenRadioButtonGroup"
+                                columns="1"
+                                width="500px"
+                                class="sapUiMediumMarginBottom"
+                                select=".onPressModeBtn">
+                                <buttons>
+                                    <RadioButton id="RB1-1" text="show/hide" selected="true" custom:splitAppMode="ShowHideMode" />
+                                    <RadioButton id="RB1-2" text="stretch/compress" custom:splitAppMode="StretchCompressMode" />
+                                    <RadioButton id="RB1-3" text="hide" custom:splitAppMode="HideMode" />
+                                    <RadioButton id="RB1-4" text="popover" custom:splitAppMode="PopoverMode" />
+                                </buttons>
+                            </RadioButtonGroup>
+                        </VBox>
+                    </Page>
+                    <Page
+                        id="detail2"
+                        title="Detail 3 Page"
+                        backgroundDesign= "Solid"
+                        showNavButton="true"
+                        navButtonPress=".onPressDetailBack">
+                        <Label id="_IDGenLabel3" text="This is Detail Page 3" />
+                        <Input id="_IDGenInput"/>
+                        <Label id="_IDGenLabel4" text="Label 2" />
+                        <Input id="_IDGenInput1"/>
+                        <Label id="_IDGenLabel5" text="Label 3" />
+                        <Input id="_IDGenInput2"/>
+                        <Label id="_IDGenLabel6" text="Label 4" />
+                        <Input id="_IDGenInput3"/>
+                        <Label id="_IDGenLabel7" text="Label 5" />
+                        <Input id="_IDGenInput4"/>
+                    </Page>
+                </detailPages>
+                <masterPages>
+                    <Page
+                        id="master"
+                        title="Master 1"
+                        backgroundDesign= "List">
+                        <List id="_IDGenList">
+                            <StandardListItem id="_IDGenStandardListItem" title="To Master2" type="Navigation" press=".onPressGoToMaster" />
+                        </List>
+                    </Page>
+                    <Page
+                        id="master2"
+                        title="Master 2"
+                        backgroundDesign= "List"
+                        showNavButton="true"
+                        navButtonPress=".onPressMasterBack">
+                        <List id="_IDGenList1" itemPress=".onListItemPress">
+                            <StandardListItem id="_IDGenStandardListItem1" title="To Detail 1" type="Active" custom:to="detail" />
+                            <StandardListItem id="_IDGenStandardListItem2" title="To Detail 2" type="Active" custom:to="detailDetail" />
+                            <StandardListItem id="_IDGenStandardListItem3" title="To Detail 3" type="Active" custom:to="detail2" />
+                        </List>
+                    </Page>
+                </masterPages>
+            </SplitContainer>
+        </content>
+    </Page>
+</mvc:View>
