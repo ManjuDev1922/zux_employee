@@ -1,14 +1,14 @@
-Overview
+## Overview
 
 This is a basic Fiori application demonstrating how to navigate between two views: a list report and an object page. The app utilizes SAPUI5 and Fiori elements to provide a user-friendly interface.
 
-Prerequisites
+## Prerequisites
 
 SAP Web IDE Full Stack or SAP Business Application Studio
 Basic knowledge of SAPUI5 and Fiori elements
 Getting Started
 
-Clone the Repository:
+## Clone the Repository:
 Bash
 git clone https://github.com/ManjuDev1922/zux_employee.git
 Use code with caution.
@@ -25,17 +25,19 @@ Navigation Mechanism
 
 The app uses the sap.m.routing.Router class to manage navigation between the two views. The manifest.json file defines the routing configuration, specifying the target views and their corresponding patterns.
 
-Key Features
+## Key Features
 
 List Report View:
-Displays a list of items with essential information.
+Displays a list of employees with essential information.
 Provides a search functionality to filter the list.
 Allows users to select an item to navigate to the object page.
+
 Object Page View:
-Displays detailed information about the selected item.
+Displays detailed information about the selected employee.
 Includes various sections and fields to present the data.
 Provides a back button to navigate back to the list report.
-Customization and Extension
+
+## Customization and Extension
 
 You can customize and extend the app by:
 
@@ -43,7 +45,8 @@ Modifying the data model to fetch data from different sources (e.g., OData servi
 Adding more fields and sections to the views.
 Implementing custom logic in the controllers.
 Using Fiori elements features like smart controls and actions.
-Further Learning
+
+## Further Learning
 
 Refer to the SAPUI5 and Fiori elements documentation for in-depth information.
 Explore the SAP Fiori Design Guidelines for best practices in user interface design.
